@@ -1,0 +1,37 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                  story css start
+=============================================*/
+#story{
+    padding: 70px 0;
+    .story_img{
+        width: 390px;
+    }
+    .story_text{
+        width: 550px;
+        h2{
+            @include fs($head, 22px, 700, $play);
+            margin-bottom: 18px;
+            text-transform: uppercase
+        }
+        p{
+            @include fs($para, 14px, 300, $roboto);
+            margin-bottom: 28px;
+            line-height: 18px;
+            span{
+                display: block;
+                margin-top: 25px;
+            }
+        }
+        a {
+            @include btn();
+            @include fs($hover, 16px, 400, $ham);
+
+        }
+    }
+}
+/*=============================================
+                  story css end
+=============================================*/

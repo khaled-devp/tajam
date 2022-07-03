@@ -1,0 +1,38 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                 quote css start
+=============================================*/
+#quote{
+    padding: 120px 0 140px;
+    position: relative;
+    z-index: 1;
+    &::after{
+        @include overlay();
+        z-index: -1;
+    }
+    .quote_text{
+    padding: 0 90px;
+    i{
+        font-size: 32px;
+        color: #fff;
+        margin-bottom: 40px;
+    }
+    p{
+        @include fs(#bcb9c6, 16px, 400, $play);
+        line-height: 26px;
+    }
+    h4{
+        @include fs(#fff, 14px, 900, $roboto);
+        margin-top: 30px;
+    }
+    h5{
+        @include fs(#bcb9c6, 13px, 300, $roboto);
+        margin-top: 5px;
+    }
+    }
+}
+/*=============================================
+                 quote css end
+=============================================*/

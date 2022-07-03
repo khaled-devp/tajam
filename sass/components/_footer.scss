@@ -1,0 +1,132 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                 footer css start
+=============================================*/
+#footer{
+    padding: 72px 0;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include overlay();
+        z-index: -1;
+    }
+    .foot_row{
+        .foot_logo{
+            width: 320px;
+            p{
+                @include fs(#fff, 14px, 300, $roboto);
+                line-height: 26px;
+                margin-top: 18px;
+                margin-bottom: 69px;
+            }
+            ul{
+                li{
+                    @include fs(#fff, 14px, 300, $roboto); 
+                }
+            }
+        }
+        .studio{
+            width: 300px;
+            h3{
+                @include fs(#fff, 15px, 900, $roboto);
+                text-transform: uppercase;
+                margin-top: 19px;
+                margin-bottom: 33px;
+            }
+            .location_2nd{
+                p{
+                    @include fs(#fff, 14px, 300, $roboto); 
+                    line-height: 26px;
+                    padding-left: 34px;
+                    span{
+                        display: block;
+                    }
+                }
+            }
+            .location{
+                a{
+                  i{
+                      font-size: 20px;
+                      color: #fff;
+                      margin-right: 15px;
+                  }
+                }
+                p{
+                    @include fs(#fff, 14px, 300, $roboto); 
+                }
+            }
+            .phone{
+                margin-top: 20px;
+                a{
+                    i{
+                        font-size: 20px;
+                        color: #fff;
+                        margin-right: 15px;
+                    }
+                  }
+                  p{
+                      @include fs(#fff, 14px, 300, $roboto); 
+                  }
+            }
+        }
+        .stay{
+            width: 320px;
+             h3{
+                @include fs(#fff, 15px, 900, $roboto);
+                text-transform: uppercase;
+                margin-top: 19px;
+                margin-bottom: 29px;
+            }
+            .subscribe{
+                input{
+                    width: 212px;
+                    height: 44px;
+                    border: 1px solid #9e98b0;
+                    background: #9e98b0;
+                    padding-left: 15px;
+                    @include fs(#fff, 14px, 300, $roboto);
+                    margin-right: 4px;
+    
+                }
+                a{
+                    color: black;
+                    
+                    i{
+                        font-size: 30px;
+                        padding: 1px 20px 12px;
+                        border: 1px solid #9e98b0;
+                        background: #9e98b0;
+                        text-align: center;
+                    }
+                }
+            }
+            ul{
+                margin-top: 25px;
+                li{
+                    margin-right: 10px;
+                    a{
+                        i{
+                            font-size: 16px;
+                            padding: 10px;
+                            border: 1px solid #fff;
+                            border-radius: 50%;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            p{
+                @include fs(#fff, 14px, 400, $roboto);
+                margin-top: 66px;
+                text-align: end;
+                margin-right: 33px;
+            }
+        }
+    }
+}
+/*=============================================
+                 footer css end
+=============================================*/

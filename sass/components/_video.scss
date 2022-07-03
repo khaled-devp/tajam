@@ -1,0 +1,25 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                  video css start
+=============================================*/
+#video{
+    padding: 202px 0;
+    position: relative;
+    z-index: 1;
+    &::after {
+        @include overlay();
+        z-index: -1;
+    }
+    .video_row{
+        h3{
+            @include fs(#fff, 16px, 900, $roboto);
+            text-transform: uppercase;
+            margin-top: 28px;
+        }
+    }
+}
+/*=============================================
+                  video css end
+=============================================*/

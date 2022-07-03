@@ -1,0 +1,73 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                 team css start
+=============================================*/
+#team {
+    padding: 70px 0;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include overlay();
+        z-index: -1;
+    }
+
+    .team_head {
+        h2 {
+            @include fs($white, 22px, 700, $play);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 66px;
+                left: 50%;
+                width: 50px;
+                height: 3px;
+                background: #655c80;
+                transform: translateX(-50%)
+            }
+
+        }
+
+        p {
+            @include fs(#f9f9f9, 14px, 400, $play);
+            margin-bottom: 65px;
+        }
+
+    }
+    .team_col{
+        border: 1px solid #79788c;
+        h3{
+            @include fs($white, 14px, 900, $roboto);
+            text-transform: uppercase;
+            margin-top: 16px;
+            margin-bottom: 8px;
+        }
+        p{
+            @include fs(#fafafa, 13px, 300, $roboto);
+            text-transform: uppercase;
+            margin-bottom: 21px;
+        }
+    }
+    .team_foot{
+        p{
+            @include fs(#f3f3f3, 14px, 300, $roboto);
+            margin-top: 66px;
+            margin-bottom: 22px;
+        }
+        a {
+            @include btn();
+            @include fs($hover, 16px, 400, $ham);
+
+        }
+    }
+}
+
+/*=============================================
+                 team css end
+=============================================*/

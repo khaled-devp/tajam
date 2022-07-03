@@ -1,0 +1,71 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                 work css start
+=============================================*/
+#work {
+    padding: 72px 0;
+
+    .work_head {
+        h2 {
+            @include fs($head, 22px, 700, $play);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 66px;
+                left: 50%;
+                width: 50px;
+                height: 3px;
+                background: #c6c4c9;
+                transform: translateX(-50%)
+            }
+        }
+
+        p {
+            @include fs($para, 14px, 400, $play);
+            margin-bottom: 45px;
+        }
+    }
+
+    .work_title {
+
+        ul {
+            justify-content: center;
+            margin-bottom: 50px;
+            li{
+                padding: 12px 10px;
+                border: 1px solid #dddddd;
+                margin-right: 10px;
+                @include fs(#413d4b, 16px, 400, $play);
+                cursor: pointer;
+            }
+        }
+    }
+    .work_img{
+        ul{
+            li{
+                width: 16%;
+                
+            }
+        }
+    }
+    .work_foot{
+        text-align: center;
+        margin-top: 68px;
+        a {
+            
+            @include btn();
+            @include fs($hover, 16px, 400, $ham);
+    
+        }
+    }
+}
+
+/*=============================================
+                 work css end
+=============================================*/

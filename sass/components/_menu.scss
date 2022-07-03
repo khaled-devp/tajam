@@ -1,0 +1,36 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                  menu css start
+=============================================*/
+#menu{
+    padding: 16px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+.menu_row{
+    .main_menu{
+        ul{
+            li{
+                
+                a{
+                    @include fs(#fff, 13px, 900, $roboto);
+                    line-height: 50px;
+                    margin-left: 25px;
+                    text-transform: uppercase;
+                    transition: all linear .3s;
+                    &:hover{
+                        color: $hover;
+                    }
+                }
+            }
+        }
+    }
+}
+/*=============================================
+                  menu css end
+=============================================*/

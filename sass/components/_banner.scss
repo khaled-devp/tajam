@@ -1,0 +1,58 @@
+@import '../variables/variables';
+@import '../mixins/mixin';
+
+/*=============================================
+                  banner css start
+=============================================*/
+#banner {
+    padding: 230px 0 208px;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        @include overlay();
+        z-index: -1;
+    }
+
+    .banner_text {
+        width: 780px;
+        margin: 0 auto;
+        position: relative;
+
+        h1 {
+            @include fs(#fff, 32px, 900, $play);
+            margin-bottom: 43px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                top: 50px;
+                left: 50%;
+                width: 50px;
+                height: 2px;
+                background: $hover;
+                transform: translateX(-50%)
+            }
+            
+        }
+
+        
+
+        p {
+            @include fs(#fff, 14px, 300, $roboto);
+            line-height: 24px;
+            margin-bottom: 43px;
+        }
+
+        a {
+            @include btn();
+            @include fs($hover, 16px, 400, $ham);
+
+        }
+    }
+
+}
+
+/*=============================================
+                  banner css end
+=============================================*/
